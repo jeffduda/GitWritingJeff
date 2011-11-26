@@ -1,0 +1,72 @@
+
+% Background and Significance
+% No page limit
+\chapter{Conclusions and Future Directions}
+\label{chap_conclusions}
+
+\section{Contributions}
+The specific contribution of this dissertation are as follows:
+\begin{itemize}
+\item We presented methods for using multivariate data to identify anatomy-specific white matter trajectories for the examination of focal white matter degradation resulting from traumatic brain injury.
+\item A method for creating geometric models of tube-like fiber tracts was developed to increase statistical power and reduce dimensionality.
+\item We undertook the first study demonstrating the cognitive influence of the functional and structural connections that integrate two subnetwork to form a large-scale neural network that allows for complex cognitive processing in a study of decision-making in a language task.
+\item A study examining structure and function examined the hypothesis that a reduction in functional symmetry with aging is accompanied by structural changes in the fiber tracts that provide associative and commisural connectivity to the cortical regions associated with the language network.
+\end{itemize}
+
+\section{Future Directions}
+In all methodological development, an emphasis was placed upon the the use of freely available, open-source code, specifically: ITK~\cite{Yoo2002}, ANTS~\cite{ANTS}, Pipedream~\cite{Pipedream} and Camino~\cite{Cook2006}. All relevant code will be integrated into these existing packages, and made publicly available. 
+
+We have demonstrated a method for creating atlas-based geometric models of fiber tracts that is applicable to components of all fiber types found in the brain: projection, commissural and association. The creation of a single multivariate atlas in which all of these fiber tracts were identified and modeled could provide a basis for a number of studies. Evidence of effects in all of these fiber types has been found for TBI~\cite{duda08mmbia,Sidaros2008,Karunanayaka2007} and for aging~\cite{Ardekani2007,Salat2005,Bastin2010}.
+
+Chapter~\ref{chap_tbi} presented evidence that subject-specific fitting of fiber templates enhances fidelity and statistical significance in a study comparing two populations. Extending this idea to the geometric models of fiber tracts used in chapters~\ref{chap_homo} and~\ref{chap_lat} could provide an interesting framework for whole-tract studies, especially if combined with an atlas including all of the fiber tracts that may be identified using DTI-based methods, as described above. While initially intended for use in identifying white matter differences, earlier work~\cite{duda08miccai} examining a metric that relates a diffusion tensor to a prior estimate of orientation could provide a natural metric for adapting template fiber models to subject-specific data sets.
+
+The work presented in chapter~\ref{chap_lat} provided interesting results regarding the nature of lateralization with aging and the resulting functional and structural consequences, but the small sample size limited what could be studied. An examination of the structural consequences of aging using available, larger datasets would be interesting. This also presents an opportunity to examine dissection-based methods for heuristically partitioning the midsagittal cross-section of the corpus callosum based upon functional associations, in particular the method proposed by Witelson, et al.\ \cite{Witelson1989}. This method has been used extensively and continues to be used to link structural and functional changes and it would be interesting to evaluate its relevance with regard to modern neuroimaging-based techniques.
+
+All of the functional connectivity analyses presented here relied upon the use of event-related BOLD fMRI. While BOLD fMRI is a widely used modality, it is not the only neuroimaging technique available for detecting function in the brain. The use of arterial spin labeling (ASL) fMRI presents an interesting opportunity as recent work has suggested it may offer multiple advantages over BOLD such as: higher sensitivity to slowly changing neural activity, reduced inter-subject variability, and enhanced fidelity of functional localization~\cite{Detre2002}. Despite these advantages, little work has explored the combined analysis of DTI and ASL fMRI.
+
+
+
+%
+%
+%
+% From proposal
+%
+%
+%
+
+
+%Paragraph discussing brain as a computational network
+
+
+% DTI and structural connectivity
+%\section{Diffusion Tensor MRI}
+%Of particular interest in this work is the use of diffusion tensor MRI in the examination of structural connectivity. Diffusion tensor imaging provides an \emph{in-vivo} non-invasive measure of the local probability of self-motion of water molecules and has proven useful in a number of applications for the study of brain white matter~\cite{Basser1994}. 
+%The diffusion of water in white matter is highly anisotropic due to cell walls and myelin which inhibit diffusion perpendicular to the fiber tracts more so than diffusion parallel to the tracts. Both the shape and orientation of the diffusion tensor provide important information regarding the structure of the white matter. Scalar metrics derived from the diffusion tensor, such as fractional anisotropy (FA) and mean diffusion (MD) are often used to quantify various tissue properties. The structural information provided by the diffusion tensor has been shown to be useful in a multitude of studies examining topics such as neurodegenerative disorders, traumatic brain injury, development, and ageing among others~\cite{Lebel2008,Sydykova2007,Xu2007}.
+
+
+%\section{Structural Connectivity}
+%Recently, a number of studies have sought to use DTI to measure whole brain structural connectivity~\cite{Honey2009,Hagmann2008,Hagmann2007,Sporns2005,Iturria-Medina2007}. Many of these studies have relied upon measures such as "fiber counts" and fiber length to estimate structural connectivity. These types of metrics are known to be unreliable due to bias resulting from total brain volume, differences in size between regions of the brain, noise, and partial voluming~\cite{Corouge2006}. Additionally, they fail to incorporate the geometric features provided by the tract model as well as neglecting to incorporate the biophysical properties of the tissue that compromises these fiber pathways. The use of metrics for structural connectivity that leverage the anatomic framework provided by tractography to probe underlying tissue architecture may provide more relevant insight regarding the physical integrity of cortical connections. 
+
+%The examination of cortical thickness provides an alternative method for examining structural connectivity between cortical regions~\cite{Lerch2006,He2007,He2008}. This approach is similar to methods for examining functional connectivity where a seed region-of-interest is used to test for statistical dependence with other point in the cortex. Here however, measures of cortical thickness are compared. An examination of the language network revealed a connectivity pattern that closely resembles the results of fiber tractography studies~\cite{Lerch2006} and a study of Alzeheimer's disease provided evidence of large-scale disruption of integrity in brain networks~\cite{He2008}.
+
+%%Paragraph discussing graph based analysis of the brain network
+%\section{Graph-based Analysis of Connectivity}
+%The use of graph-based network analysis techniques provides a natural, and increasingly popular, framework for examining connectivity in the brain~\cite{Hagmann2007,Iturria-Medina2007,Iturria-Medina2008,Hagmann2008,Honey2007,Achard2006}. The vertices of the graph correspond to functionally related sets of neurons while the edges correspond to the physical connection or statistical dependencies between these nodes. Much previous work used this concept to study functional connectivity but recently a great deal of work has focused upon incorporating both structural and functional connectivity into a common network for analysis~\cite{Werring1998a,Werring1999b,Wieshmann2001,Honey2009,Bullmore2009,Koch2002a,Skudlarski2008}. Vertices may interact via multiple connections with variable length or weights assigned to them as well as through indirect paths that pass through other vertices. This representation provides a multitude of methods for examining the data such as clustering, path lengths, vertex degree and strength and many others~\cite{Brandes2005}. This framework additionally provide a natural basis for examination at multiple scales. 
+
+%% How we address the above work with novel work
+%\section{Significance of Proposed Work}
+%Here we present  a framework for examining connectivity in the brain. We focus on connectivity at the macro scale and how it may be studied with MRI. To this end, we using diffusion tensor MRI along with fiber tractography to extract structural information from white matter fiber bundles. The anatomical frame-of-reference provided by the fiber model is used to develop metrics that incorporate the geometry of the model and quantify how it related to the underlying structure in individual subjects. 
+%We demonstrate the ability of these methods to identify both local and gross white matter differences and characterize difference types of connectivity pathologies and the metrics appropriate for their investigation. Finally, a healthy control atlas is used to model the language network in order to explore the relationship between functional and structural connectivity in a well-known sub-network of the brain.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+
+\documentclass[pdftex]{upenndiss}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{courier}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\input epsf
+\usepackage[small,normal,bf,up]{caption}
+
+\graphicspath{{figures/}}
+
+%\renewcommand{\captionfont}{\small\itshape}
+% \begingroup
+%  \renewcommand{\thepage}{title}
+%  % commands that generates the title page
+%  \newpage
+% \endgroup
+
+% title
+\title{Characterizing Connectivity In Brain Networks Using Magnetic Resonance Imaging}
+
+\author{Jeffrey T. Duda}
+
+\copyrightfalse
+\department{Bioengineering}
+
+\supervisor{James C. Gee, Ph.D.}%\\gee@mail.med.upenn.edu}
+\gradchair{Christopher S. Chen, Ph.D.} 
+%\committee{Susan Margulies, Ph.D. \and Talissa Altes, M.D.  \and Joel Cooper, M.D. \and Hiroto Hatabu, M.D. Ph.D.}
+\committee{Andrew Tsourkas, Ph.D. \and Murray Grossman, M.D., Ed.D. \and Lyle Ungar, Ph.D. \and Nick Bryan, M.D., Ph.D.}
+
+
+
+% front matter
+\abstractfile{abstract}		
+\acknowledgementsfile{ack}
+\dedicationfile{dedication}
+
+\begin{document}
+\FrontMatter*
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+%\abbreviations{abbreviations}
+\listoftables
+\listoffigures
+\MainMatter
+
+\include{commands} 
+\include{intro}
+\include{background}
+%\include{callosum}
+%\include{language}
+\include{tbi}
+\include{homonym}
+\include{lateral}
+\include{conclusions}
+%\include{ctregval}
+%\include{mrregval}
+%\include{temporal}
+%\include{summary}
+
+%\include{miccai07}
+%\include{applm}
+%\include{appstrains}
+%\include{appresources}
+%\include{app2}
+\appendix
+\include{self}
+
+% And the bibliography
+
+\bibliographystyle{plain}
+\bibliography{homonym,proposal,tbi,tbitech,connect,language,witelson,proposal_refs,dti,historic,lateral,witelsonneuro,thesis}
+
+
+
+
+\end{document}
+
+
+
+
+
