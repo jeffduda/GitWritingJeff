@@ -1,0 +1,8 @@
+# Logs and databases #
+######################
+*.log
+*.aux
+*.lot
+*.lof
+*.out
+*.toc
